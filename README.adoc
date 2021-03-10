@@ -4,6 +4,8 @@
 Nie zaczynaj na czczo ;)
 
 Dodatkowe materiały :
+
 https://www.samouczekprogramisty.pl/strumienie-w-jezyku-java/[strumienie]
+
 https://www.samouczekprogramisty.pl/wyrazenia-lambda-w-jezyku-java/[wyrażenia lambda]
 
