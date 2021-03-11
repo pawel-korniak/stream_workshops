@@ -1,6 +1,6 @@
 = Warsztaty z wyrażeń lambda i strumieni
 
-link:src/com/github/pawelkorniak/Main.java[zadania]
+link:src/main/java/com/github/pawelkorniak/Main.java[zadania]
 
 Dodatkowe materiały :
 
