@@ -1,7 +1,5 @@
 package com.github.pawelkorniak.data;
 
-import com.github.pawelkorniak.data.TypKuchni;
-
 public class Meal {
     private String name;
     private int fat;
@@ -21,30 +19,8 @@ public class Meal {
         this.calPerPortion = calPerPortion;
     }
 
-    @Override
-    public String toString() {
-        return name +
-                " : tłuszcze=" + fat +
-                ", węglowodany=" + carb +
-                ", białka=" + protein +
-                ", typ=" + typ.name()
-                ;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public int getFat() {
-        return fat;
-    }
-
-    public int getCarb() {
-        return carb;
-    }
-
-    public int getProtein() {
-        return protein;
     }
 
     public TypKuchni getTyp() {

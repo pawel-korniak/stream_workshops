@@ -15,15 +15,17 @@ class MealsStatistics {
     Predicate<Meal> isVege = Meal::isVegetarian;
     Predicate<Meal> isGeorgian = meal -> meal.getTyp().equals(TypKuchni.GRUZINSKA);
 
-    List<Meal> vegetarianOfGeorgia() {
+    List<String> vegetarianOfGeorgia() {
         return mealList.stream()
                 .filter(isVege.and(isGeorgian))
+                .map(Meal::getName)
                 .collect(Collectors.toList());
     }
 
-    List<Meal> vegetarianWithoutGeorgian() {
+    List<String> vegetarianWithoutGeorgian() {
         return mealList.stream()
                 .filter(isVege.and(isGeorgian.negate()))
+                .map(Meal::getName)
                 .collect(Collectors.toList());
     }
 
