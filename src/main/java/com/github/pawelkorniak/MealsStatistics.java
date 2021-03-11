@@ -5,38 +5,28 @@ import com.github.pawelkorniak.data.Meal;
 import com.github.pawelkorniak.data.TypKuchni;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 class MealsStatistics {
     Data data = new Data();
     List<Meal> mealList = data.getMeals();
 
-    Predicate<Meal> isVege = Meal::isVegetarian;
-    Predicate<Meal> isGeorgian = meal -> meal.getTyp().equals(TypKuchni.GRUZINSKA);
+    // dodaj pola jeśli potrzebujesz
 
     List<String> vegetarianOfGeorgia() {
-        return mealList.stream()
-                .filter(isVege.and(isGeorgian))
-                .map(Meal::getName)
-                .collect(Collectors.toList());
+        // spróbuj użyć tylko jednej operacji filter na strumieniu
+        return mealList.stream();
     }
 
     List<String> vegetarianWithoutGeorgian() {
-        return mealList.stream()
-                .filter(isVege.and(isGeorgian.negate()))
-                .map(Meal::getName)
-                .collect(Collectors.toList());
+        // spróbuj użyć tylko jednej operacji filter na strumieniu
+        return mealList.stream();
     }
 
     Map<TypKuchni, Long> countVegeByType() {
-        return mealList.stream()
-                .filter(isVege)
-                .collect(Collectors.groupingBy(Meal::getTyp,Collectors.counting()));
+        return mealList.stream();
     }
 
     Map<TypKuchni, Double> averageCaloriesByType() {
-        return mealList.stream()
-                .collect(Collectors.groupingBy(Meal::getTyp,Collectors.averagingInt(Meal::getCalPerPortion)));
+        return mealList.stream();
     }
 }

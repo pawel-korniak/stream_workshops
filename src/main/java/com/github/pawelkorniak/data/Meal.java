@@ -5,9 +5,9 @@ public class Meal {
     private int fat;
     private int carb;
     private int protein;
-    private TypKuchni typ;
-    private boolean isVegetarian;
-    private int calPerPortion;
+    private TypKuchni typ; // typ według narodowości
+    private boolean isVegetarian; // true jeśli wegetariańskie
+    private int calPerPortion; // kalorie na porcję
 
     public Meal(String name, int fat, int carb, int protein, TypKuchni typ, boolean isVegetarian, int calPerPortion) {
         this.name = name;
